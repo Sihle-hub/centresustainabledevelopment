@@ -38,7 +38,7 @@
 					</header>
 
 				<!-- Banner -->
-					<section id="banner">
+					<section id="banner" class="hero-bg">
 						<div class="inner">
 							<h2>Centre for Sustainable Development</h2>
 							<p>	Your partner in quality 
@@ -249,7 +249,7 @@
 						
 						<section class="spotlight">
 							<div class="image"><img src="david.jpg" alt="" /></div><div class="content">
-								<h2>David Zyigambo</h2>
+								<h2>David Zigambo</h2>
 								<p>Founding member, is Managing Director of social business accounting company in Johannersburg. He has overall 
 								responsibility for the Firm’s accounting guidance and training on all accounting topics. David also provides 
 								consultation on complex accounting and taxation assignments</p>
@@ -277,7 +277,7 @@
 								support services, and organisational capacity development.</p>
 							</header>
 							<ul class="features">
-								<li class="icon fa-paper-plane">
+								<li class="icon fa-chart-bar">
 									<h3>BUILDING MONITORING AND EVALUATION SYSTEMS</h3>
 									<p>We develop comprehensive monitoring & evaluation (M&E) frameworks that align the 
 									project/organisational activities, outputs and outcomes, and measurement instruments to the 
@@ -295,26 +295,26 @@
 									<p>Developing an Organisational Programme Strategy to align M&E to your organisational and 
 									funding requirements</p>
 								</li>
-								<li class="icon solid fa-headphones-alt">
+								<li class="icon solid fa-clipboard-check">
 									<h3>EVALUATIONS</h3>
 									<p>We aim to demystify the evaluation process because we know that the field of monitoring and 
 									evaluation can be intimidating and daunting to many. We strive to make M&E jargon and 
 									processes accessible and understandable throughout our engagements with evaluation roleplayers.</p>
 								</li>
-								<li class="icon fa-heart">
+								<li class="icon solid fa-lightbulb">
 									<h3>SOCIAL SCIENCE RESEARCH</h3>
 									<p>We conduct tailored social science research to meet client needs, including literature reviews,
 										 policy analyses, and data audits. Our services also cover report planning, data analysis,
 										  and survey design to enhance program effectiveness and alignment with policy</p>
 								</li>
-								<li class="icon fa-flag">
+								<li class="icon solid fa-briefcase">
 									<h3>BUSINESS DEVELOPMENT/RESOURCE MOBILISATION SERVICES</h3>
 									<p>Crafting compelling funding proposals for donors.<br>
 										Preparing Business Profiles and Plans.<br>
 										Facilitating new Company and NPO Registrations.
 									</p>
 								</li>
-								<li class="icon fa-flag">
+								<li class="icon solid fa-calculator">
 									<h3>ACCOUNTING SERVICES</h3>
 									<p>Tax Clearance Certificates.<br>
 									  Payslips and Payroll Admin.<br>
@@ -325,7 +325,7 @@
 									Import and Export Licences.<br>
 									COIDA Letter of Good Standing.</p>
 								</li>
-								<li class="icon fa-flag">
+								<li class="icon solid fa-laptop">
 									<h3>IT SUPPORT SERVICES</h3>
 									
 										<p>Website Design.<br>
@@ -366,7 +366,7 @@
 								<p>Trust Foundation for Community Development</p>
 							</li>						
 							<li>
-								<p>Mangunda Formers Development Savings and Credit.co</p>
+								<p>Mangunda Farmers Development Savings and Credit.co</p>
 							</li>
 							
 							
@@ -393,34 +393,38 @@
 						
 						<!--CONTACT US-->
 						
-						<section >
-						<h4>CONTACT US</h4>
-						<form method="post" action="/ContactUs" class="formform">
-							<div class="row gtr-uniform">
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="demo-name" value="" placeholder="Name" required/>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="demo-email" value="" placeholder="Email" required/>
-								</div>
-								<div class="col-12">
-									<input type="text" name="subject" id="subject" value="" placeholder="Subject" required/>
-								</div>
-								<div class="col-4 col-12-small">
-
-								<div class="col-12">
-									<textarea name="message" id="demo-message" placeholder="Enter your message" rows="6" required></textarea>
-								</div>
-								<div class="col-12">
-									<ul class="actions">
-										<li><button type="submit"  class="primary" onclick="printOut()">Send</button></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
+						<section>
+						    <h4>CONTACT US</h4>
+						    <div class="form-container">
+						        <form id="contactForm" method="post" action="/ContactUs" class="formform" onsubmit= "printOut()">
+						            <div class="row gtr-uniform">
+						                <div class="col-6 col-12-xsmall">
+						                    <input type="text" name="name" id="demo-name" value="" placeholder="Name" required />
+						                    <span id="nameError" class="error-message"></span>
+						                </div>
+						                <div class="col-6 col-12-xsmall">
+						                    <input type="email" name="email" id="demo-email" value="" placeholder="Email" required/>
+						                    <span id="emailError" class="error-message"></span>
+						                </div>
+						                <div class="col-12">
+						                    <input type="text" name="subject" id="subject" value="" placeholder="Subject" required/>
+						                    <span id="subjectError" class="error-message"></span>
+						                </div>
+						                <div class="col-12">
+						                    <textarea name="message" id="demo-message" placeholder="Enter your message" rows="6" required></textarea>
+						                    <span id="messageError" class="error-message"></span>
+						                </div>
+						                <div class="col-12">
+						                    <div class="button-container">
+						                        <input type="submit" value="Send Message"  class="primary" />
+						                        <input type="reset" value="Reset" />
+						                    </div>
+						                </div>
+						            </div>
+						        </form>
+						    </div>
 						</section>
-						
+
 						<!--CONTACT US-->
 						
 					</section>
@@ -429,9 +433,15 @@
 					<footer id="footer">
 						<ul class="icons">
 
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.facebook.com/charles.chabwera2" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							
+							<li><a href="mailto:chabwerabanda@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							
+							<li><a href="tel:+27782360763" class="fas fa-phone-alt contact-icon"><span class="label"></span></a></li>
+						</ul>
+						<ul>
+							<li>1170 Komane Street Atteridgeville Pretoria</li>
+							
 						</ul>
 						<ul class="copyright">
 							<li>&copy; Centre for Sustainable Development</li>
@@ -448,6 +458,59 @@
 			   alert("Thank you, will get back to you soon");
 			   
 			}
+		
+	
+			    document.getElementById('contactForm').addEventListener('submit', function(event) {
+			        // Flag to check if the form is valid
+			        let isValid = true;
+			
+			        // Clear previous error messages
+			        document.getElementById('nameError').textContent = '';
+			        document.getElementById('emailError').textContent = '';
+			        document.getElementById('subjectError').textContent = '';
+			        document.getElementById('messageError').textContent = '';
+			
+			        // Get form elements
+			        const name = document.getElementById('demo-name').value.trim();
+			        const email = document.getElementById('demo-email').value.trim();
+			        const subject = document.getElementById('subject').value.trim();
+			        const message = document.getElementById('demo-message').value.trim();
+			
+			        // Validate name
+			        if (name === '') {
+			            document.getElementById('nameError').textContent = 'Name is required.';
+			            isValid = false;
+			        }
+			
+			        // Validate email
+			        if (email === '') {
+			            document.getElementById('emailError').textContent = 'Email is required.';
+			            isValid = false;
+			        } else if (!/\S+@\S+\.\S+/.test(email)) {
+			            document.getElementById('emailError').textContent = 'Email is invalid.';
+			            isValid = false;
+			        }
+			
+			        // Validate subject
+			        if (subject === '') {
+			            document.getElementById('subjectError').textContent = 'Subject is required.';
+			            isValid = false;
+			        }
+			
+			        // Validate message
+			        if (message === '') {
+			            document.getElementById('messageError').textContent = 'Message is required.';
+			            isValid = false;
+			        }
+			
+			        // If validation failed, prevent form submission
+			        if (!isValid) {
+			            event.preventDefault();
+			        }
+			    });
+		
+
+			
 		</script>
 		    <script src="readmore.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
